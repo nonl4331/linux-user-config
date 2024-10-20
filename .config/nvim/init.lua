@@ -116,7 +116,14 @@ local telescope = {
 			function()
 				require("telescope.builtin").buffers()
 			end,
-			desc = "Buffers",
+			desc = "Buffer Search",
+		},
+		{
+			"<leader>t",
+			function()
+				require("telescope.builtin").treesitter()
+			end,
+			desc = "Treesitter search",
 		},
 		{
 			"<leader>km",
@@ -174,7 +181,7 @@ local treesitter = {
 	"nvim-treesitter/nvim-treesitter",
 	build = ":TSUpdate",
 	config = true,
-	opts = { ensure_installed = { "c", "cpp", "cmake", "make", "rust", "lua", "python" }, highlight = { enabled = true, }, }
+	opts = { ensure_installed = { "c", "cpp", "cmake", "make", "rust", "lua", "python" }, highlight = { enabled = true, }, sync_install = false, }
 }
 
 local rust_crates = {
