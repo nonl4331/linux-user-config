@@ -36,7 +36,10 @@ focus output DP-3
 
 output * bg ~/images/wallpapers/bars.png fill
 {{- end }}
+{{ if eq .chezmoi.hostname "fern" -}}
 
+output * bg ~/images/wallpapers/autumn_forest.png fill
+{{- end }}
 
 default_border none
 floating_modifier $mod normal
