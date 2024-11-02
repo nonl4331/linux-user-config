@@ -51,8 +51,14 @@ bindsym $mod+d exec rofi -show drun -no-show-match -no-sort -modi calc -terse -n
 bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -2%
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +2%
 bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+{{if eq .chezmoi.hostname "pine" -}}
 bindsym Print exec grim -g "$(slurp -c '#ff0000ff')" -t ppm - | satty --filename - --output-filename ~/images/screenshots/"$(date --rfc-3339=seconds).png"
 bindsym $mod+Print exec grim -g "$(slurp -o -r -c '#ff0000ff')" -t ppm - | satty --filename - --output-filename ~/images/screenshots/"$(date --rfc-3339=seconds).png"
+{{- end }}
+{{if eq .chezmoi.hostname "fern" -}}
+bindsym XF86Launch2 exec grim -g "$(slurp -c '#ff0000ff')" -t ppm - | satty --filename - --output-filename ~/images/screenshots/"$(date --rfc-3339=seconds).png"
+bindsym $mod+XF86Launch2 exec grim -g "$(slurp -o -r -c '#ff0000ff')" -t ppm - | satty --filename - --output-filename ~/images/screenshots/"$(date --rfc-3339=seconds).png"
+{{- end }}
 bindsym $mod+Mod1+p exec killall -SIGUSR1 gpu-screen-recorder
 
 
