@@ -117,14 +117,14 @@ button:hover {
 }
 
 #battery {
-	background-color: #ffffff;
-	color: #000000;
+	background-color: #15181D;
+	color: #ffffff;
 }
 
 #battery.charging,
 #battery.plugged {
 	color: #ffffff;
-	background-color: #26A65B;
+	background-color: #15181D;
 }
 
 @keyframes blink {
@@ -150,18 +150,18 @@ button:hover {
 }
 
 #power-profiles-daemon.performance {
-	background-color: #f53c3c;
+	background-color: #15181D;
 	color: #ffffff;
 }
 
 #power-profiles-daemon.balanced {
-	background-color: #2980b9;
+	background-color: #15181D;
 	color: #ffffff;
 }
 
 #power-profiles-daemon.power-saver {
-	background-color: #2ecc71;
-	color: #000000;
+	background-color: #15181D;
+	color: #ffffff;
 }
 
 label:focus {
@@ -225,7 +225,7 @@ label:focus {
 }
 
 #temperature {
-	background-color: #f0932b;
+	background-color: #15181D;
 }
 
 #temperature.critical {
@@ -233,7 +233,8 @@ label:focus {
 }
 
 #tray {
-	background-color: #2980b9;
+	background-color: #15181D;
+	color: #ffffff;
 }
 
 #tray>.passive {
